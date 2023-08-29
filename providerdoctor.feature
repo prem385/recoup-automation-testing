@@ -36,7 +36,8 @@ Scenario:provider doctor navigates to payment
     Then  provider doctor must able to find patient name called nisha in a list
     And provider doctor must able to see amount paid by nisha
     And Then  provider doctor must able to see payment mode done by nisha
-    And provider doctor must able to see Transaction Id and status
+    And provider doctor must able to see Transaction Id and status 
+    gffdf
 
 
 
