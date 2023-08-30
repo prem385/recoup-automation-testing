@@ -301,23 +301,44 @@ Feature: Managing question bank
      And admin clicks on submit
      Then successfully  created message should display
 
-   Scenario: creating question by selecting grid
+   Scenario: creating question by selecting file upload
      When admin navigates to question bank
      When admin click on create button
-     And admin selects linear scale
+     And admin selects file uoload
      And admin enters question in a question field
      And admin enters descrtiption in a description field
      And admin enters help in a help desk field
-     And admin selects grid select type
-     And admin enters scale range from 1 to 50
-     And admin enters rowlabel1 in rows
-     And admin enter boundary label 1 and 2
+     And admin uploads file from folder
      And admin selects answer required to this question,Include N/A,Save User Answer with EHR
+     And admin selects allow only specific file types
+     And admin clicks on preview
+     And admin selects number of files
+     And admin selects maximum file size
+     And admin selects 'aa' tags
+     And admin should able to see preview page
+     And admin clicks on submit
+     Then successfully  created message should display
+
+
+   Scenario: creating question by selecting take a photo or take a video or record audio
+     When admin navigates to question bank
+     When admin click on create button
+     And admin selects take a photo
+     And admin enters question in a question field
+     And admin enters descrtiption in a description field
+     And admin enters help in a help desk field
+     And admin selects only media type select type
+     And admin take a photo and uploads
+     And admin selects answer required to this question,Include N/A,Save User Answer with EHR
+     And admin selects allow only specific file types
+     And admin selects number of photos,number of videos,number of records
+     And admin selects maximum file size
      And admin selects 'aa' tags
      And admin clicks on preview
      And admin should able to see preview page
      And admin clicks on submit
      Then successfully  created message should display
+
 
 
 
