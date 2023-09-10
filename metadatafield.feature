@@ -38,3 +38,21 @@ Feature: Manage Metadata Fields
     And admin select the index checkbox
     And admin select the search checkbox
     Then error message should display
+
+   Scenario: Add a new metadata field without giving mandatory filed
+    When admin navigates to metadata fields
+    When admin click on the "Create" button
+    And admin left blank api name
+    And admin enter "Email" as the display name
+    And admin enters tip in tooltip
+    And admin select the required checkbox
+    And admin select the api response checkbox
+    And admin select "Email" from the type dropdown
+    And admin left blank from the display type dropdown
+    And admin enters value in default value
+    And admin select the index checkbox
+    And admin select the search checkbox
+    And admin clicks on add validation rule
+    And admin selects one of the validation rule
+    And admin clicks on create
+    Then error message 'please enter api name' should display  
