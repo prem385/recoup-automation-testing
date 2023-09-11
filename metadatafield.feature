@@ -56,3 +56,22 @@ Feature: Manage Metadata Fields
     And admin selects one of the validation rule
     And admin clicks on create
     Then error message 'please enter api name' should display  
+
+   
+  Scenario: editing metadata fields
+    When admim navigates to metadata fields
+    And admin clicks on added metadata settings
+    And admin clicks on edit
+    And admin changes api name
+    And admin changes display name
+    And admin changes type
+    And admin clicks on edit
+    Then metadta should be displayed in edited version
+
+  Scenario: Deleting metadata fields
+    When admim navigates to metadata fields
+    And admin clicks on added metadata settings
+    And admin clicks on delete
+    Then popup should display showing 'are you sure you want to delete this metadatafield
+    And admin clicks on delete
+    Then metada field should be delete 
